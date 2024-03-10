@@ -290,6 +290,7 @@ img.single-bbl,img.single-bbl2{
 @media (max-width:630px) {
     
 .header{
+    overflow:hidden;
     width:100%;
     height: 60vh;
     background-color: rgb(77, 255, 77);
