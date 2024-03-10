@@ -1,0 +1,536 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.container{
+    width:100vw;
+    height:100vh; 
+}
+.header{
+    width:100%;
+    height: 65vh;
+    background-color: rgb(77, 255, 77);
+}
+.header-bbl{
+position: absolute;
+top: 25em;
+animation: upwardsBubble 6s infinite forwards ease-in-out;
+animation-delay: 4s;
+}
+.header-bbl2{
+    position: absolute;
+    top: 25em;
+    right: 2em;
+    animation: upwardsBubble 6s infinite forwards ease-in-out;
+    animation-delay: 2s;
+    }
+@keyframes upwardsBubble {
+    0%{
+        top: 25em;
+    }
+    100%{
+        top: -15em;
+    }
+}
+
+img.single-bbl,img.single-bbl2{
+    mix-blend-mode: multiply;
+    color: green;
+}
+.background-circle{
+    position: absolute;
+    right:130px;
+    top:-2em;
+    z-index: 3;
+    width:450px;
+    height: 450px;
+    background-color: rgb(23, 252, 15);
+    border-radius: 50%;
+    box-shadow: 0 0 .5px 0 green;
+}
+.footer{
+    width: 100vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+.footer-bg{
+    width:100vw;
+    height: fit-content;
+    overflow: hidden;
+}
+.footer-bg-image{
+    width: 100%;
+    height: fit-content;
+    filter: contrast(150%);
+
+}
+
+.navbar{
+    display: grid;
+    grid-template-columns:5fr 1fr 1fr 1fr 1fr 1fr 2fr;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 4;   
+    height: 50px;
+    box-shadow: 0 0 1px 0 black;
+    font-size: .9em;
+    font-weight:600;
+    font-family:sans-serif;
+    color:rgb(52, 51, 51);
+}
+.box:hover{
+    color: rgb(124, 122, 122);
+    cursor: pointer;
+}
+.Portfolio-active{
+    color: rgb(95, 94, 94);
+}
+.Main-heading{
+    position: absolute;
+    top: 4em;
+    width: 1100px;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.background-heading::before{
+    content: "  WELCOME  ";
+    position: absolute;
+    top:3em;
+    right: 1.5em;
+    z-index: -1;
+    text-align: center;
+    font-size: 3.3em;
+    color: green;
+    opacity: .7;      
+    /* width: 60%;   */
+    width: 0;
+    border-right: 0 solid transparent;
+    border-radius: 10%;
+    white-space: nowrap;
+    word-wrap: wrap;
+    overflow: hidden;
+    animation: typing 5s steps(20,end) infinite forwards;
+}
+@keyframes typing {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 70%;
+    }
+}
+
+.port-heading{
+    font-family:'Times New Roman', Times, serif;
+    text-align: start;
+    width: 400px;
+    font-size: 2.2em;
+}
+.port-desc-box{
+    width: 400px;
+}
+.port-desc{
+    text-align: start;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.about-btn-box{
+    width: 400px;
+}
+.about-btn{
+    margin:1.5em 0;
+    align-self: start;
+    color:black;
+    border:.1em solid rgb(58, 95, 55);
+    background-color: transparent;
+    padding: .6em 1em;
+    border-radius: .3em;
+    font-weight: 600;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+.about-btn:hover,.about-btn:focus{
+    color:rgb(48, 48, 48);
+}
+.section{
+    border-radius: .1em;
+    height: 200px;
+    width: 50%;
+    position: absolute;
+    top:2em;
+    left: 22em;
+    z-index: 3;
+    background-color: white;
+    border: .1px solid rgb(219, 217, 217);
+}
+.section::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-image: url(Images/bg-water.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .2;
+}
+.my-resume{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1em;
+}
+.resume-heading{
+    margin:.5em 0;
+    color:rgb(4, 107, 4);
+    font-weight: 900;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.my-resume-description{
+    text-align: center;
+    width: 80%;
+    padding: 0;
+    font-weight: 700;
+}
+.resume-download-btn{
+    margin:1em 0;
+}
+.resume-btn{
+    border:none;
+    background-color: rgb(23, 252, 15);
+    color:black;
+    padding: .8em 1.2em;
+    font-size: .7em;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius:.2em;
+    cursor: pointer;
+}
+.section-bg{
+    width:40%;
+    height: 29%;
+    background-image: linear-gradient(rgb(46, 45, 45),rgb(108, 115, 117));
+    position: absolute;
+    top:0;
+    right: 8em;   
+    box-shadow: 0 0 .3em 0 black;
+}
+.section-bg-line1{
+    background-color: rgb(39, 43, 40);
+    width: 5%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 23em;
+}
+
+.section-bg-line2{
+    background-color: rgb(36, 41, 36);
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 5em;
+    right: 0;
+}
+.section-left-bg{
+    overflow: hidden;
+    width: 681px;
+    height: 60%;
+    position: absolute;
+    top:0;
+}
+.section-left-bg-img{
+    width: 100%;
+    height: 100%;
+    opacity: .2;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+.social-links{
+    width: 30px;
+    height: 100px;
+    position: relative;
+    top: 5em;
+    left:.1em;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    row-gap: .3em;
+}
+/* .link-box{
+    margin: .1em;
+    border: 2px solid blue;
+} */
+.bi-instagram,.bi-linkedin,.bi-facebook{
+    width: 70%;
+    height: 70%;
+}
+
+
+
+/* Media Quries */
+@media (max-width:630px) {
+    
+.header{
+    width:100%;
+    height: 60vh;
+    background-color: rgb(77, 255, 77);
+}
+.header-bbl{
+    position: absolute;
+    top: 25em;
+    animation: upwardsBubble 6s infinite forwards ease-in-out;
+    animation-delay: 2s;
+    }
+    .header-bbl2{
+        position: absolute;
+        top: 25em;
+        right: 0;
+        animation: upwardsBubble 6s infinite forwards ease-in-out;
+        animation-delay: 1s;
+        }
+    @keyframes upwardsBubble {
+        0%{
+            top: 25em;
+        }
+        100%{
+            top: -15em;
+        }
+    }
+    
+    img.single-bbl,img.single-bbl2{
+        mix-blend-mode: multiply;
+        color: green;
+    }
+.background-circle{
+    position: absolute;
+    right:10px;
+    top:-2em;
+    width:260px;
+    height: 260px;
+}
+.background-heading::before{
+    content: "  WELCOME  ";
+    position: absolute;
+    top:5.6em;
+    right: 2em;
+    z-index: -1;
+    text-align: center;
+    font-size: 1.5em;
+    color: green;
+    opacity: .7;      
+    /* width: 60%;   */
+    width: 0;
+    border-right: 0 solid transparent;
+    border-radius: 10%;
+    white-space: nowrap;
+    word-wrap: wrap;
+    overflow: hidden;
+    animation: typing 5s steps(20,end) infinite forwards;
+}
+@keyframes typing {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 70%;
+    }
+}
+.my-port-pic{
+    width:97%;
+    position: relative;
+    top:2em;
+}
+
+.Main-heading{
+    position: relative;
+    top: 4em;
+    left:2em;
+    z-index: 4;
+    width: 150px;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.port-heading{
+    position: inherit;
+    top: 0;     
+    left: 0;
+    z-index: 3;
+    font-family:'Times New Roman', Times, serif;
+    text-align: start;
+    width: 160px;
+    font-size: 1.2em;
+}
+.port-desc-box{
+    width: 160px;
+    font-size: .6em;
+    position: inherit;
+    top: 0;     
+    left: 0;
+    z-index: 3;
+}
+.port-desc{
+    text-align: start;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.about-btn-box{
+    width: 160px;
+}
+.about-btn{
+    margin:.5em 0;
+    align-self: start;
+    color:black;
+    border:.1em solid rgb(58, 95, 55);
+    background-color: transparent;
+    padding: .2em .4em;
+    border-radius: .3em;
+    font-weight: 500;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    font-size: .6em;
+}
+.navbar{
+    display: grid;
+    grid-template-columns:5fr 1fr 1fr 1fr 1fr 1fr 2fr;
+}
+.box{
+    padding: .4em .8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 4;   
+    height: 25px;
+    box-shadow: 0 0 1px 0 black;
+    font-size: .55em;
+    font-weight:600;
+    font-family:sans-serif;
+    color:rgb(52, 51, 51);
+}
+.section{
+    padding: 0;
+    border-radius: .1em;
+    height: 110px;
+    width: 70%;
+    position: absolute;
+    top: 1em;
+    left: 4em;
+    background-color: white;
+    border: .1px solid rgb(219, 217, 217);
+}
+.my-resume{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: .3em;
+}
+.resume-heading{
+    margin:.2em 0;
+    color:rgb(4, 156, 4);
+    font-weight: 700;
+    font-size: .5em;
+}
+.my-resume-description{
+    font-size: .6em;
+    text-align: center;
+    width: 90%;
+    padding: 0;
+}
+.resume-download-btn{
+    margin:.1em 0;
+}
+.resume-btn{
+    border:none;
+    background-color: rgb(23, 252, 15);
+    color:black;
+    padding: .4em 1em;
+    font-size: .4em;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius:.2em;
+    cursor: pointer;
+}
+.section-bg{
+    width:60%;
+    height: 53%;
+    background-image: linear-gradient(rgb(46, 45, 45),rgb(108, 115, 117));
+    position: absolute;
+    top:0;
+    right: 1em;   
+    box-shadow: 0 0 .3em 0 black;
+}
+.section-bg-line1{
+    background-color: rgb(39, 43, 40);
+    width: 5%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 4.5em;
+}
+.section-bg-line2{
+    background-color: rgb(36, 41, 36);
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 5em;
+    right: 0;
+}
+.section-left-bg{
+    overflow: hidden;
+    width: 140px;
+    height: 42%;
+    position: absolute;
+    top:0;
+}
+.section-left-bg-img{
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+.social-links{
+    width: 50px;
+    height: 3px;
+    position: relative;
+    top: 11.35em;
+    left:.2em;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: .1em;
+}
+/* .link-box{
+    margin: .1em;
+    border: 2px solid blue;
+} */
+.bi-instagram,.bi-linkedin,.bi-facebook{
+    width: 70%;
+    height: 70%;
+}
+}
