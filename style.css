@@ -105,33 +105,7 @@ img.single-bbl,img.single-bbl2{
     justify-content: center;
     align-items: center;
 }
-.background-heading::before{
-    content: "  WELCOME  ";
-    position: absolute;
-    top:3em;
-    right: 1.5em;
-    z-index: -1;
-    text-align: center;
-    font-size: 3.3em;
-    color: green;
-    opacity: .7;      
-    /* width: 60%;   */
-    width: 0;
-    border-right: 0 solid transparent;
-    border-radius: 10%;
-    white-space: nowrap;
-    word-wrap: wrap;
-    overflow: hidden;
-    animation: typing 5s steps(20,end) infinite forwards;
-}
-@keyframes typing {
-    0%{
-        width: 0;
-    }
-    50%{
-        width: 70%;
-    }
-}
+
 
 .port-heading{
     font-family:'Times New Roman', Times, serif;
