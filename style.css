@@ -328,38 +328,8 @@ img.single-bbl,img.single-bbl2{
     width:260px;
     height: 260px;
 }
-.background-heading::before{
-    content: "  WELCOME  ";
-    position: absolute;
-    top:5.6em;
-    right: 2em;
-    z-index: -1;
-    text-align: center;
-    font-size: 1.5em;
-    color: green;
-    opacity: .7;      
-    /* width: 60%;   */
-    width: 0;
-    border-right: 0 solid transparent;
-    border-radius: 10%;
-    white-space: nowrap;
-    word-wrap: wrap;
-    overflow: hidden;
-    animation: typing 5s steps(20,end) infinite forwards;
-}
-@keyframes typing {
-    0%{
-        width: 0;
-    }
-    50%{
-        width: 70%;
-    }
-}
-.my-port-pic{
-    width:97%;
-    position: relative;
-    top:2em;
-}
+
+
 
 .Main-heading{
     position: relative;
