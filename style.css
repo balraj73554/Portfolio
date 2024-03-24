@@ -17,15 +17,8 @@
 position: absolute;
 top: 25em;
 animation: upwardsBubble 6s infinite forwards ease-in-out;
-animation-delay: 4s;
+animation-delay: 3s;
 }
-.header-bbl2{
-    position: absolute;
-    top: 25em;
-    right: 2em;
-    animation: upwardsBubble 6s infinite forwards ease-in-out;
-    animation-delay: 2s;
-    }
 @keyframes upwardsBubble {
     0%{
         top: 25em;
@@ -35,25 +28,16 @@ animation-delay: 4s;
     }
 }
 
-img.single-bbl,img.single-bbl2{
+img.single-bbl{
     mix-blend-mode: multiply;
     color: green;
+    width:80px;
 }
-.background-circle{
-    position: absolute;
-    right:130px;
-    top:-2em;
-    z-index: 3;
-    width:450px;
-    height: 450px;
-    background-color: rgb(23, 252, 15);
-    border-radius: 50%;
-    box-shadow: 0 0 .5px 0 green;
-}
+
 .footer{
     width: 100vw;
     position: relative;
-    top: 0;
+    top: 10em;
     left: 0;
     z-index: 3;
 }
@@ -105,7 +89,33 @@ img.single-bbl,img.single-bbl2{
     justify-content: center;
     align-items: center;
 }
-
+.background-heading::before{
+    content: "  WELCOME  ";
+    position: absolute;
+    top:3em;
+    right: 1.5em;
+    z-index: -1;
+    text-align: center;
+    font-size: 3.3em;
+    color: green;
+    opacity: .7;      
+    /* width: 60%;   */
+    width: 0;
+    border-right: 0 solid transparent;
+    border-radius: 10%;
+    white-space: nowrap;
+    word-wrap: wrap;
+    overflow: hidden;
+    animation: typing 5s steps(20,end) infinite forwards;
+}
+@keyframes typing {
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 70%;
+    }
+}
 
 .port-heading{
     font-family:'Times New Roman', Times, serif;
@@ -264,9 +274,9 @@ img.single-bbl,img.single-bbl2{
 @media (max-width:630px) {
     
 .header{
-    overflow:hidden;
+    overflow: hidden;
     width:100%;
-    height: 60vh;
+    height: 100%;
     background-color: rgb(77, 255, 77);
 }
 .header-bbl{
@@ -275,13 +285,6 @@ img.single-bbl,img.single-bbl2{
     animation: upwardsBubble 6s infinite forwards ease-in-out;
     animation-delay: 2s;
     }
-    .header-bbl2{
-        position: absolute;
-        top: 25em;
-        right: 0;
-        animation: upwardsBubble 6s infinite forwards ease-in-out;
-        animation-delay: 1s;
-        }
     @keyframes upwardsBubble {
         0%{
             top: 25em;
@@ -290,20 +293,6 @@ img.single-bbl,img.single-bbl2{
             top: -15em;
         }
     }
-    
-    img.single-bbl,img.single-bbl2{
-        mix-blend-mode: multiply;
-        color: green;
-    }
-.background-circle{
-    position: absolute;
-    right:10px;
-    top:-2em;
-    width:260px;
-    height: 260px;
-}
-
-
 
 .Main-heading{
     position: relative;
@@ -379,7 +368,7 @@ img.single-bbl,img.single-bbl2{
 .section{
     padding: 0;
     border-radius: .1em;
-    height: 110px;
+    height: 50%;
     width: 70%;
     position: absolute;
     top: 1em;
@@ -423,7 +412,7 @@ img.single-bbl,img.single-bbl2{
 }
 .section-bg{
     width:60%;
-    height: 53%;
+    height: 62%;
     background-image: linear-gradient(rgb(46, 45, 45),rgb(108, 115, 117));
     position: absolute;
     top:0;
